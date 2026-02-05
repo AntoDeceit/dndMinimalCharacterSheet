@@ -2,13 +2,83 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon App</title>
+  <title>Fiche de personnage D&D</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Bienvenue</h1>
-  <button id="btn">Clique-moi</button>
+  <h1>Fiche de personnage D&D</h1>
+
+  <form id="character-form">
+    <section class="block">
+      <h2>Identité</h2>
+      <label>
+        Nom :
+        <input type="text" name="nom">
+      </label>
+      <label>
+        Classe :
+        <input type="text" name="classe">
+      </label>
+      <label>
+        Niveau :
+        <input type="number" name="niveau" min="1" max="20">
+      </label>
+      <label>
+        Race :
+        <input type="text" name="race">
+      </label>
+      <label>
+        Alignement :
+        <input type="text" name="alignement">
+      </label>
+    </section>
+
+    <section class="block">
+      <h2>Caractéristiques</h2>
+      <div class="grid">
+        <label>FOR <input type="number" name="for" min="1" max="30"></label>
+        <label>DEX <input type="number" name="dex" min="1" max="30"></label>
+        <label>CON <input type="number" name="con" min="1" max="30"></label>
+        <label>INT <input type="number" name="int" min="1" max="30"></label>
+        <label>SAG <input type="number" name="sag" min="1" max="30"></label>
+        <label>CHA <input type="number" name="cha" min="1" max="30"></label>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Points de vie & divers</h2>
+      <label>
+        Points de vie max :
+        <input type="number" name="pvMax" min="1">
+      </label>
+      <label>
+        Points de vie actuels :
+        <input type="number" name="pvActuels" min="0">
+      </label>
+      <label>
+        Classe d’armure :
+        <input type="number" name="ca" min="0">
+      </label>
+      <label>
+        Vitesse :
+        <input type="text" name="vitesse">
+      </label>
+    </section>
+
+    <section class="block">
+      <h2>Notes</h2>
+      <textarea name="notes" rows="5" placeholder="Traits, équipement, sorts, background…"></textarea>
+    </section>
+
+    <div class="actions">
+      <button type="button" id="clear-btn">Effacer la fiche</button>
+    </div>
+  </form>
+
+  <p class="info">
+    La fiche est automatiquement sauvegardée dans votre navigateur (localStorage).
+  </p>
 
   <script src="script.js"></script>
 </body>
