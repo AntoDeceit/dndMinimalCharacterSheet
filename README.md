@@ -1,3 +1,0 @@
-# dndMinimalCharacterSheet
-
-POLOLO
